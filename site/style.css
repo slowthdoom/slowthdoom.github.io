@@ -74,6 +74,8 @@ h3 { margin: 0; line-height: 1.1; }
 /* bio: kept in normal case so it pastes correctly */
 #bio { padding-bottom: 38px; }
 .bio-text { text-transform: none; margin: 4px 0 0; max-width: 800px; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; }
+.bio-text a { color: var(--lilac); text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
+.bio-text a:hover { color: var(--bone); }
 .copy { margin-top: 20px; border: 1px solid var(--lilac); background: transparent; min-height: 44px; padding: 8px 14px; font-size: 13px; }
 .copy:hover { background: var(--lilac); color: var(--night); }
 
