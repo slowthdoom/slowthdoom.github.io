@@ -31,8 +31,10 @@ All logo files are made from the band's original artwork (not in this repo):
   under it at the same width.
 - `site/assets/favicon.png` (64 px, browser tab) and `site/assets/apple-touch-icon.png` (180 px,
   phone bookmarks) are the whole sloth badge, with its white margin removed.
-- `tools/slowth-logo-print.png` is the Slowth wordmark as a transparent PNG, used by the one-sheet,
-  the tech rider and the link-preview image. It is not published on the site.
+- The one-sheet uses the same sloth art (`site/assets/slowth-badge.jpg`), centred above genre, city
+  and members.
+- `tools/slowth-logo-print.png` is the Slowth wordmark as a transparent PNG, used by the tech rider
+  and the link-preview image. It is not published on the site.
 
 If the artwork changes, remake these files, rebuild both PDFs and the link-preview image, and update
 the `?v=` values.
