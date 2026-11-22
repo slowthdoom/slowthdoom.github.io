@@ -61,6 +61,7 @@ Plain facts. No slogans.
   the Samply player, which is an iframe and runs under Samply's own terms.
 - The Samply player is public, without a password, by the band's decision. Keep the
   "demo versions / raw pre-mix and pre-master" label next to it until the files are final.
-  Never add `?si=` to a Samply link (it is an account ID).
+  Never add `?si=` to a Samply link (it is an account ID). The only query allowed is the
+  player colour, `?color=3b0d63` (the plum of the crew band).
 
 Run `python3 tools/validate_site.py` before pushing.

@@ -25,7 +25,7 @@ for url in re.findall(r'(?:href|src|content)="(https?://[^"]+)"', pages):
         errors.append(f'link to an unapproved site: {url}')
 
 for url in re.findall(r'https://samply\.app/[^"\s<]+', pages):
-    if '?' in url:
+    if '?' in url and not re.fullmatch(r'https://samply\.app/embed/[A-Za-z0-9]+\?color=[0-9a-f]{6}', url):
         errors.append(f'Samply link with a query string (si= is an account ID): {url.split("?")[0]}')
 
 refs = re.findall(r'(?:href|src|data-download)="([^"]+)"', html)
