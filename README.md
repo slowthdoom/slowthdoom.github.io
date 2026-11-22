@@ -9,7 +9,7 @@ Every push to `main` validates and publishes the `site/` folder. Nothing else is
 
 | To change | Edit |
 | --- | --- |
-| Text, sections, release plan, bios, contact | `site/index.html` |
+| Text, sections, release plan, gigs, bios, contact | `site/index.html` |
 | Colours and layout | `site/style.css` (colours are at the top) |
 | Photos | `site/assets/photos/` (web) and `site/assets/press/` (downloads) |
 | Printable one-sheet | `tools/one-sheet.html`, then rebuild the PDF |
@@ -18,6 +18,11 @@ Every push to `main` validates and publishes the `site/` folder. Nothing else is
 The release plan and contact address appear on both the page and the one-sheet: change both.
 The page is written in normal case and displayed in lowercase by CSS. The bio stays in normal
 case so it pastes correctly, and must be identical on the page and the one-sheet.
+
+## Gigs
+
+In the `gigs` table in `site/index.html`, replace a row's three `TBA` cells with date, venue and
+city, and remove `class="tba"` from each cell you fill in. Copy a row to add another gig.
 
 ## Member band photos
 
