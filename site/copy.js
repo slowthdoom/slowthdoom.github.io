@@ -3,6 +3,7 @@
   if (!navigator.clipboard) return;
   document.querySelectorAll('[data-copy]').forEach(button => {
     button.hidden = false;
+    const label = button.textContent;
     button.addEventListener('click', async () => {
       const text = document.getElementById(button.dataset.copy);
       try {
@@ -12,7 +13,7 @@
         getSelection().selectAllChildren(text);
         button.textContent = 'selected';
       }
-      setTimeout(() => { button.textContent = 'copy'; }, 2000);
+      setTimeout(() => { button.textContent = label; }, 2000);
     });
   });
 })();

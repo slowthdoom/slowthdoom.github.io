@@ -16,8 +16,17 @@ Every push to `main` validates and publishes the `site/` folder. Nothing else is
 | Link-preview image | `tools/share-image.html` (1200 x 630) |
 
 The release plan and contact address appear on both the page and the one-sheet: change both.
-The page is written in normal case and displayed in lowercase by CSS. Bios stay in normal
-case so they paste correctly.
+The page is written in normal case and displayed in lowercase by CSS. The bio stays in normal
+case so it pastes correctly, and must be identical on the page and the one-sheet.
+
+## Member band photos
+
+Put the photo in `site/assets/bands/`, replace that member's `pending` block in
+`site/index.html` with an `<img class="project-photo">`, and fill in the venue, city and year.
+
+## Tone
+
+Plain facts. No slogans.
 
 ## Rebuilding the one-sheet (macOS)
 
@@ -33,6 +42,9 @@ case so they paste correctly.
   listening links by email. The validator and `.gitignore` both block audio files.
 - A new outside link has to be added to `ALLOWED_HOSTS` in `tools/validate_site.py`.
 - Remove camera metadata from photos before adding them.
+- Press photos of Slowth are credited to Viljami Eronen. Keep the credit next to them.
+- After changing a CSS, JS, PDF or image file that keeps its name, update its `?v=` in
+  `site/index.html` so nobody gets a cached copy.
 - No analytics, cookies, external fonts or third-party scripts.
 
 Run `python3 tools/validate_site.py` before pushing.

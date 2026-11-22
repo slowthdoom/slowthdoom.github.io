@@ -10,7 +10,7 @@ AUDIO = {'.wav', '.mp3', '.flac', '.aif', '.aiff', '.m4a', '.ogg', '.opus', '.wm
 # Every outside address must be added here on purpose.
 ALLOWED_HOSTS = {
     'slowthdoom.github.io', 'coochilla.github.io', 'craneiumband.bandcamp.com',
-    'icaptain.bandcamp.com', 'tuonelamagazine.com', 'www.skraeckoedlan.com',
+    'icaptain.bandcamp.com', 'tuonelamagazine.com', 'www.skraeckoedlan.com', 'vimeo.com',
 }
 errors = []
 
@@ -27,13 +27,20 @@ for url in re.findall(r'(?:href|src|content)="(https?://[^"]+)"', pages):
 refs = re.findall(r'(?:href|src|data-download)="([^"]+)"', html)
 refs += re.findall(r'url\("([^"]+)"\)', (site / 'style.css').read_text())
 for ref in refs:
-    if not re.match(r'https?:|mailto:|#|data:', ref) and not (site / ref).is_file():
+    if not re.match(r'https?:|mailto:|#|data:', ref) and not (site / ref.split('?')[0]).is_file():
         errors.append(f'missing file: {ref}')
 
 ids = set(re.findall(r'\bid="([^"]+)"', html))
 for anchor in re.findall(r'href="#([^"]+)"', html) + re.findall(r'data-copy="([^"]+)"', html):
     if anchor not in ids:
         errors.append(f'missing section: #{anchor}')
+
+bios = []
+for page, marker in ((html, r'id="bio-text">'), ((root / 'tools' / 'one-sheet.html').read_text(), r'class="bio">')):
+    found = re.search(marker + r'([^<]+)</p>', page)
+    bios.append(found and found.group(1))
+if not bios[0] or bios[0] != bios[1]:
+    errors.append('the bio differs between the page and the one-sheet')
 
 if errors:
     raise SystemExit('\n'.join(errors))
