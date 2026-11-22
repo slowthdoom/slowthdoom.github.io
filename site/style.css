@@ -128,13 +128,11 @@ h3 { margin: 0; line-height: 1.1; }
 
 /* songs */
 .fans { margin: 6px 0 0; font: 21px/1.4 var(--display); max-width: 290px; }
-.songs { margin: 0; padding: 0; list-style: none; counter-reset: song; }
-.songs li { counter-increment: song; display: grid; grid-template-columns: 34px 1fr auto; gap: 4px 20px; align-items: baseline; padding: 15px 0; border-top: 1px solid var(--line); }
-.songs li::before { content: counter(song, decimal-leading-zero); color: var(--lilac); font-size: 12px; }
-.songs h3 { font-size: clamp(24px, 2.4vw, 34px); }
 .tba { text-transform: none; color: var(--ash); font-size: 13px; letter-spacing: .14em; }
-.listen { margin: 22px 0 0; }
-.listen a { color: var(--lilac); }
+.demo-label { margin: 28px 0 0; color: var(--lilac); }
+.demo-note { margin: 6px 0 0; font: 700 clamp(21px, 2.1vw, 28px)/1.3 var(--display); max-width: 330px; }
+.demo-note span { white-space: nowrap; }
+.player { display: block; width: 100%; height: 420px; border: 1px solid var(--line); background: var(--bark); color-scheme: normal; }
 
 /* release plan: same colour and label-over-name pattern as the crew band */
 .plan { background: var(--plum); padding: 54px 0 58px; }

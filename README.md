@@ -43,14 +43,18 @@ Plain facts. No slogans.
 
 ## Rules
 
-- **No audio in this repository.** It is public, and so is its history. Share private
-  listening links by email. The validator and `.gitignore` both block audio files.
+- **No audio in this repository.** It is public, and so is its history. The demos are
+  streamed from Samply. The validator and `.gitignore` both block audio files.
 - A new outside link has to be added to `ALLOWED_HOSTS` in `tools/validate_site.py`.
 - Remove camera metadata from photos before adding them.
 - Press photos of Slowth are credited to Viljami Eronen. Keep the credit next to them.
 - The 2023 Coochilla photo at Bar Loose is by Marko Nevanperä. Each band photo carries its own credit.
 - After changing a CSS, JS, PDF or image file that keeps its name, update its `?v=` in
   `site/index.html` so nobody gets a cached copy.
-- No analytics, cookies, external fonts or third-party scripts.
+- No analytics, cookies, external fonts or third-party scripts of our own. The one exception is
+  the Samply player, which is an iframe and runs under Samply's own terms.
+- The Samply player is public, without a password, by the band's decision. Keep the
+  "demo versions / raw pre-mix and pre-master" label next to it until the files are final.
+  Never add `?si=` to a Samply link (it is an account ID).
 
 Run `python3 tools/validate_site.py` before pushing.

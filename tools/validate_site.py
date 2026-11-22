@@ -10,6 +10,7 @@ AUDIO = {'.wav', '.mp3', '.flac', '.aif', '.aiff', '.m4a', '.ogg', '.opus', '.wm
 # Every outside address must be added here on purpose.
 ALLOWED_HOSTS = {
     'slowthdoom.github.io', 'www.skraeckoedlan.com', 'vimeo.com', 'www.instagram.com',
+    'samply.app',
 }
 errors = []
 
@@ -22,6 +23,10 @@ pages = html + (root / 'tools' / 'one-sheet.html').read_text()
 for url in re.findall(r'(?:href|src|content)="(https?://[^"]+)"', pages):
     if urlparse(url).hostname not in ALLOWED_HOSTS:
         errors.append(f'link to an unapproved site: {url}')
+
+for url in re.findall(r'https://samply\.app/[^"\s<]+', pages):
+    if '?' in url:
+        errors.append(f'Samply link with a query string (si= is an account ID): {url.split("?")[0]}')
 
 refs = re.findall(r'(?:href|src|data-download)="([^"]+)"', html)
 refs += re.findall(r'url\("([^"]+)"\)', (site / 'style.css').read_text())
