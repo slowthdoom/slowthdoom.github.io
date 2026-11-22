@@ -23,17 +23,18 @@ case so it pastes correctly, and must be identical on the page and the one-sheet
 
 ## Logo
 
-The logo exists in three forms, all made from the band's original logo file (not in this repo):
+All logo files are made from the band's original artwork (not in this repo):
 
-- `site/assets/slowth-logo.jpg` is the logo on black. `site/style.css` hides the black with a CSS
-  mask, `site/assets/slowth-logo-mask.png` (white, with the logo's transparency). Together they are
-  about a quarter of the size of a transparent PNG.
-- `tools/slowth-logo-print.png` is a transparent PNG for the one-sheet and the tech rider, because
-  Chrome's PDF output ignores CSS masks. It is not published on the site.
+- `site/assets/slowth-badge.jpg` is the sloth from the band's sloth badge, cut out without its frame,
+  with the badge's grey background recoloured to the page black (`#08060c`). In `site/style.css` its
+  width is `44vw - var(--gutter)`, so it ends where the hero photo starts; genre and city are centred
+  under it at the same width.
 - `site/assets/favicon.png` (64 px, browser tab) and `site/assets/apple-touch-icon.png` (180 px,
-  phone bookmarks) are the sloth badge, a separate image from the band (white margin removed).
+  phone bookmarks) are the whole sloth badge, with its white margin removed.
+- `tools/slowth-logo-print.png` is the Slowth wordmark as a transparent PNG, used by the one-sheet,
+  the tech rider and the link-preview image. It is not published on the site.
 
-If the logo changes, remake all of them, rebuild both PDFs and the link-preview image, and update
+If the artwork changes, remake these files, rebuild both PDFs and the link-preview image, and update
 the `?v=` values.
 
 ## Gigs
