@@ -1,0 +1,45 @@
+name: Publish Slowth
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: slowth-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check the band's own address
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          url=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .html_url)
+          case "$url" in
+            https://slowthdoom.github.io/|https://slowthdoom.github.io) ;;
+            *) echo "Slowth only publishes at slowthdoom.github.io (got $url)"; exit 1 ;;
+          esac
+      - name: Validate website
+        run: python3 tools/validate_site.py
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
