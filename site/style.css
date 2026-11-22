@@ -146,6 +146,8 @@ h3 { margin: 0; line-height: 1.1; }
 .plan-detail { margin: 8px 0 0; font-size: 15px; }
 
 /* gigs */
+.rider { background: var(--purple); border-color: var(--purple); color: #fff; }
+.rider-note { margin: 10px 0 0; }
 .gig-list { width: 100%; table-layout: fixed; border-collapse: collapse; text-align: left; }
 .gig-list th { padding: 0 14px 12px 0; color: var(--lilac); text-align: left; }
 .gig-list th:first-child { width: 26%; }

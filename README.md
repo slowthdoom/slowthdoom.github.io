@@ -12,6 +12,7 @@ Every push to `main` validates and publishes the `site/` folder. Nothing else is
 | Text, sections, release plan, gigs, bios, contact | `site/index.html` |
 | Colours and layout | `site/style.css` (colours are at the top) |
 | Photos | `site/assets/photos/` (web) and `site/assets/press/` (downloads) |
+| Tech rider | `tools/tech-rider.html`, then rebuild `site/assets/slowth-tech-rider.pdf` |
 | Printable one-sheet | `tools/one-sheet.html`, then rebuild the PDF |
 | Link-preview image | `tools/share-image.html` (1200 x 630) |
 
@@ -45,6 +46,17 @@ Plain facts. No slogans.
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
   --allow-file-access-from-files --no-pdf-header-footer \
   --print-to-pdf="$PWD/site/assets/slowth-one-sheet.pdf" "file://$PWD/tools/one-sheet.html"
+```
+
+## Rebuilding the tech rider (macOS)
+
+Stage left and right are from the performers' perspective. The plot is drawn from front of
+house, so stage right is on the left of the page.
+
+```sh
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+  --no-pdf-header-footer \
+  --print-to-pdf="$PWD/site/assets/slowth-tech-rider.pdf" "file://$PWD/tools/tech-rider.html"
 ```
 
 ## Rules

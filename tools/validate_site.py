@@ -19,7 +19,7 @@ for path in root.rglob('*'):
         errors.append(f'audio file in a public repository: {path.relative_to(root)}')
 
 html = (site / 'index.html').read_text()
-pages = html + (root / 'tools' / 'one-sheet.html').read_text()
+pages = html + ''.join((root / 'tools' / name).read_text() for name in ('one-sheet.html', 'tech-rider.html'))
 for url in re.findall(r'(?:href|src|content)="(https?://[^"]+)"', pages):
     if urlparse(url).hostname not in ALLOWED_HOSTS:
         errors.append(f'link to an unapproved site: {url}')
