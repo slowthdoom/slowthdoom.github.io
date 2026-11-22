@@ -41,9 +41,9 @@ for anchor in re.findall(r'href="#([^"]+)"', html) + re.findall(r'data-copy="([^
 
 bios = []
 for page, marker in ((html, r'id="bio-text">'), ((root / 'tools' / 'one-sheet.html').read_text(), r'class="bio">')):
-    found = re.search(marker + r'(.+?)</p>', page)
-    # Same words and same links; link attributes may differ between web and print.
-    bios.append(found and (re.sub(r'<[^>]+>', '', found.group(1)), re.findall(r'href="([^"]+)"', found.group(1))))
+    found = re.search(marker + r'(.+?)</div>', page, re.S)
+    # Same words, paragraphs and links; link attributes and indentation may differ between web and print.
+    bios.append(found and (' '.join(re.sub(r'<(?!/?p>)[^>]+>', '', found.group(1)).split()), re.findall(r'href="([^"]+)"', found.group(1))))
 if not bios[0] or bios[0] != bios[1]:
     errors.append('the bio differs between the page and the one-sheet')
 

@@ -7,7 +7,9 @@
     button.addEventListener('click', async () => {
       const text = document.getElementById(button.dataset.copy);
       try {
-        await navigator.clipboard.writeText(text.textContent.trim());
+        const paras = text.querySelectorAll('p');
+        const value = paras.length ? [...paras].map(p => p.textContent.trim()).join('\n\n') : text.textContent.trim();
+        await navigator.clipboard.writeText(value);
         button.textContent = 'copied';
       } catch (_) {
         getSelection().selectAllChildren(text);

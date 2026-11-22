@@ -74,7 +74,13 @@ h3 { margin: 0; line-height: 1.1; }
 
 /* bio: kept in normal case so it pastes correctly */
 #bio { padding-bottom: 38px; }
+/* a wider heading column, so each sentence of the heading stays on one line */
+#bio { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.65fr); }
+#bio-title { font-size: clamp(32px, 4.9vw, 68px); }
+@media (max-width: 760px) { #bio { grid-template-columns: minmax(0, 1fr); } }
 .bio-text { text-transform: none; margin: 4px 0 0; max-width: 800px; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; }
+.bio-text p { max-width: none; margin: 0 0 .9em; }
+.bio-text p:last-child { margin-bottom: 0; }
 .bio-text a { color: var(--lilac); text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
 .bio-text a:hover { color: var(--bone); }
 .copy { margin-top: 20px; border: 1px solid var(--lilac); background: transparent; min-height: 44px; padding: 8px 14px; font-size: 13px; }
