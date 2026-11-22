@@ -43,6 +43,7 @@ Plain facts. No slogans.
 - A new outside link has to be added to `ALLOWED_HOSTS` in `tools/validate_site.py`.
 - Remove camera metadata from photos before adding them.
 - Press photos of Slowth are credited to Viljami Eronen. Keep the credit next to them.
+- The 2023 Coochilla photo at Bar Loose is by Marko Nevanperä. Each band photo carries its own credit.
 - After changing a CSS, JS, PDF or image file that keeps its name, update its `?v=` in
   `site/index.html` so nobody gets a cached copy.
 - No analytics, cookies, external fonts or third-party scripts.

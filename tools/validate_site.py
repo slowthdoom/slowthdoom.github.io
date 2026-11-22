@@ -10,7 +10,7 @@ AUDIO = {'.wav', '.mp3', '.flac', '.aif', '.aiff', '.m4a', '.ogg', '.opus', '.wm
 # Every outside address must be added here on purpose.
 ALLOWED_HOSTS = {
     'slowthdoom.github.io', 'coochilla.github.io', 'craneiumband.bandcamp.com',
-    'icaptain.bandcamp.com', 'tuonelamagazine.com', 'www.skraeckoedlan.com', 'vimeo.com',
+    'icaptain.bandcamp.com', 'tuonelamagazine.com', 'www.skraeckoedlan.com', 'vimeo.com', 'www.instagram.com',
 }
 errors = []
 

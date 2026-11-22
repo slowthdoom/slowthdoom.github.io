@@ -84,7 +84,7 @@ h3 { margin: 0; line-height: 1.1; }
 .project-photo { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 .project-photo.pending { display: grid; place-items: center; background: var(--bark); border: 1px solid var(--line); color: var(--ash); font: 700 13px var(--body); letter-spacing: .14em; text-transform: none; }
 .project h3 { margin-top: 14px; font-size: clamp(26px, 2.4vw, 36px); color: var(--lilac); }
-.where { margin: 3px 0 0; min-height: 1.5em; font-size: 13px; line-height: 1.5; color: var(--ash); }
+.where { margin: 3px 0 0; min-height: 3em; font-size: 13px; line-height: 1.5; color: var(--ash); }
 .member { margin: 12px 0 6px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 15px; }
 .credit { margin: 0 0 12px; font-size: 14px; line-height: 1.55; color: var(--ash); }
 .source { margin-top: auto; align-self: flex-start; font-size: 13px; }
