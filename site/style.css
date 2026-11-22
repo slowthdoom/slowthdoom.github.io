@@ -46,6 +46,8 @@ h3 { margin: 0; line-height: 1.1; }
 .hero-copy { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-bottom: 40px; }
 .hero h1 { margin: 0; width: min(40vw, 620px); }
 .hero h1 img { width: 100%; height: auto; }
+/* the logo JPEG has a black background; the mask keeps only the logo */
+.hero h1 img { -webkit-mask-image: url(assets/slowth-logo-mask.png?v=a4204aa0cb); mask-image: url(assets/slowth-logo-mask.png?v=a4204aa0cb); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
 .genre { font: 700 clamp(26px, 2.9vw, 44px)/1.05 var(--display); margin: 20px 0 10px; }
 .identity { margin: 0 0 18px; color: var(--lilac); }
 .members-of { margin: 0; max-width: 340px; color: var(--ash); line-height: 1.45; }
