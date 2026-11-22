@@ -14,10 +14,11 @@ a { color: inherit; text-decoration: none; }
 .top { height: 104mm; position: relative; overflow: hidden; }
 .photo { position: absolute; right: 0; top: 0; width: 116mm; height: 104mm; object-fit: cover; object-position: 50% 34%; }
 .photo-credit { position: absolute; right: 3mm; bottom: 2mm; font-size: 7pt; background: #08060ccc; padding: .5mm 1.5mm; }
-.mark { position: absolute; left: 11mm; top: 12mm; width: 78mm; }
-.genre { position: absolute; left: 11mm; top: 48mm; font: 700 19pt/1 Palatino, Georgia, serif; }
-.id { position: absolute; left: 11mm; top: 59mm; font-weight: 700; color: #c59cff; }
-.members { position: absolute; left: 11mm; top: 72mm; width: 75mm; }
+/* sloth art on the page black; genre, city and members centred under it, left of the photo (which starts at 94mm) */
+.mark { position: absolute; left: 11mm; top: 6mm; width: 76mm; }
+.genre { position: absolute; left: 11mm; top: 68mm; width: 76mm; text-align: center; font: 700 19pt/1 Palatino, Georgia, serif; }
+.id { position: absolute; left: 11mm; top: 78.5mm; width: 76mm; text-align: center; font-weight: 700; color: #c59cff; }
+.members { position: absolute; left: 11mm; top: 87.5mm; width: 76mm; text-align: center; }
 .band { background: #7b2cff; color: #fff; padding: 5mm 11mm; display: flex; justify-content: space-between; align-items: baseline; }
 .band strong { font: 700 27pt/1 Palatino, Georgia, serif; }
 .band span { font: 15pt/1 Palatino, Georgia, serif; }
@@ -38,7 +39,7 @@ td:first-child { width: 31mm; color: #c59cff; font-weight: 700; }
 <div class="top">
   <img class="photo" src="../site/assets/photos/slowth-stone.jpg" alt="">
   <p class="photo-credit">photo: viljami eronen</p>
-  <img class="mark" src="slowth-logo-print.png" alt="Slowth">
+  <img class="mark" src="../site/assets/slowth-badge.jpg" alt="Slowth">
   <p class="genre">prog / stoner / doom</p>
   <p class="id">turku, finland</p>
   <p class="members">members of coochilla, craneium,<br>i, captain and malamute</p>
