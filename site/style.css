@@ -44,14 +44,12 @@ h3 { margin: 0; line-height: 1.1; }
 .hero-photo::after { content: ""; position: absolute; inset: 0;
   background: linear-gradient(var(--night), transparent 22%, transparent 80%, var(--night)), linear-gradient(120deg, #3b0d6355, transparent 60%); }
 .hero-copy { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-bottom: 40px; }
-.hero h1 { margin: 0; width: min(40vw, 620px); }
+/* the sloth artwork ends where the photo starts (44% of the window); genre and city are centred under it */
+.hero h1 { margin: 0; width: calc(44vw - var(--gutter)); }
 .hero h1 img { width: 100%; height: auto; }
-/* the logo JPEG has a black background; the mask keeps only the logo */
-.hero h1 img { -webkit-mask-image: url(assets/slowth-logo-mask.png?v=a4204aa0cb); mask-image: url(assets/slowth-logo-mask.png?v=a4204aa0cb); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+.hero h1 ~ .genre, .hero h1 ~ .identity { width: calc(44vw - var(--gutter)); max-width: none; text-align: center; }
 .genre { font: 700 clamp(26px, 2.9vw, 44px)/1.05 var(--display); margin: 20px 0 10px; }
 .identity { margin: 0 0 18px; color: var(--lilac); }
-.members-of { margin: 0; max-width: 340px; color: var(--ash); line-height: 1.45; }
-.members-of strong { color: var(--bone); }
 @keyframes creep { to { transform: scale(1.035); } }
 
 /* debut band */
@@ -201,7 +199,7 @@ section[id] { scroll-margin-top: 12px; }
     -webkit-mask-image: none; mask-image: none; }
   .hero-photo img { object-position: 50% 45%; }
   .hero-copy { order: 2; flex: none; padding-top: 26px; padding-bottom: 12px; }
-  .hero h1 { width: min(100%, 620px); }
+  .hero h1, .hero h1 ~ .genre, .hero h1 ~ .identity { width: min(100%, 560px); }
 }
 
 @media (max-width: 900px) {
