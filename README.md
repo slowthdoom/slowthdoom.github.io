@@ -24,6 +24,12 @@ case so it pastes correctly, and must be identical on the page and the one-sheet
 In the `gigs` table in `site/index.html`, replace a row's three `TBA` cells with date, venue and
 city, and remove `class="tba"` from each cell you fill in. Copy a row to add another gig.
 
+## Merch
+
+The `merch` section has four slides and four thumbnails. For each picture, replace a `merch-slide pending`
+box with `<img class="merch-slide" src="..." alt="...">`, remove `pending` from its thumbnail button and
+put a small copy of the image inside it.
+
 ## Member band photos
 
 Put the photo in `site/assets/bands/`, replace that member's `pending` block in
