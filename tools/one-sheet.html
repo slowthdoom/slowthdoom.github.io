@@ -31,9 +31,13 @@ table { width: 100%; border-collapse: collapse; font: inherit; }
 td { padding: .35mm 0; vertical-align: top; }
 td:first-child { width: 31mm; color: #c59cff; font-weight: 700; }
 .plan-note { margin: 0 0 1.5mm; }
-.foot { position: absolute; left: 0; width: 100%; top: 278mm; height: 18.5mm; background: #ebe4f2; color: #08060c; padding: 3.5mm 11mm; display: flex; justify-content: space-between; align-items: center; font-size: 11pt; font-weight: 700; }
-.foot b { font: 700 18pt/1 Palatino, Georgia, serif; }
-.foot div:last-child { text-align: right; }
+/* contact (hector) and booking (martin) side by side; website and instagram at the right edge */
+.foot { position: absolute; left: 0; width: 100%; top: 275.5mm; height: 21mm; background: #ebe4f2; color: #08060c; padding: 3mm 11mm; display: flex; gap: 8mm; align-items: stretch; font-size: 9.4pt; line-height: 1.35; overflow: hidden; } /* overflow: the block labels otherwise push a blank second page */
+.foot > div { flex: 1 1 0; }
+.foot > div:first-child { flex-grow: 1.6; }
+.foot b { display: block; margin-bottom: 1mm; font: 700 14pt/1 Palatino, Georgia, serif; }
+.foot strong { font-weight: 700; }
+.foot .web { display: flex; flex-direction: column; justify-content: flex-end; text-align: right; font-weight: 700; }
 </style>
 </head>
 <body>
@@ -68,7 +72,7 @@ td:first-child { width: 31mm; color: #c59cff; font-weight: 700; }
     <table>
       <tr><td>tour manager</td><td>martin ahlö (craneium)</td></tr>
       <tr><td>mix &amp; master</td><td>robert lamu (skraeckoedlan)</td></tr>
-      <tr><td>booking</td><td>hector bahamonde (slowth bassist)</td></tr>
+      <tr><td>contact</td><td>hector bahamonde (slowth bassist)</td></tr>
     </table>
   </div>
   <div class="block">
@@ -92,8 +96,9 @@ td:first-child { width: 31mm; color: #c59cff; font-weight: 700; }
   </div>
 </div>
 <div class="foot">
-  <div><b>contact and booking</b></div>
-  <div><a href="mailto:bahamondeh@gmail.com?subject=Slowth">bahamondeh@gmail.com</a><br><a href="https://slowthdoom.github.io/">slowthdoom.github.io</a> / instagram: <a href="https://www.instagram.com/slowthdoom/">@slowthdoom</a></div>
+  <div><b>contact</b><strong>hector bahamonde</strong> / whatsapp @h.bahamonde<br><a href="mailto:bahamondeh@gmail.com?subject=Slowth">bahamondeh@gmail.com</a></div>
+  <div><b>booking</b><strong>martin ahlö</strong><br>tour manager, craneium</div>
+  <div class="web"><p><a href="https://slowthdoom.github.io/">slowthdoom.github.io</a><br>instagram: <a href="https://www.instagram.com/slowthdoom/">@slowthdoom</a></p></div>
 </div>
 </body>
 </html>

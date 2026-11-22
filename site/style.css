@@ -188,12 +188,18 @@ h3 { margin: 0; line-height: 1.1; }
 /* contact */
 .contact { padding: 96px 0; background: linear-gradient(#08060cdd, #3b0d63aa), url("assets/photos/slowth-grove.jpg") center 34% / cover; }
 .contact h2 { font-size: clamp(46px, 7.5vw, 112px); }
-.email { display: inline-block; font-size: clamp(18px, 3.6vw, 44px); font-weight: 700; overflow-wrap: anywhere; }
+/* email sized so the address fits on one line in half the contact section (it needs about 12.2em) */
+.email { display: inline-block; font-size: clamp(18px, calc(3.6vw - 3px), 44px); font-weight: 700; overflow-wrap: anywhere; }
 .social { margin: 14px 0 0; font-size: clamp(16px, 1.8vw, 22px); }
 .social, .social a { display: flex; align-items: center; gap: .5em; }
 .social a { display: inline-flex; }
 .social + .social { margin-top: 8px; }
 .social .icon { width: 1.25em; height: 1.25em; flex: none; }
+/* contact (hector) and booking (martin) side by side */
+.contact-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 56px; }
+.contact-role { margin: 0 0 6px; color: var(--lilac); }
+.contact-name { margin: 0 0 12px; font: 700 clamp(26px, 2.8vw, 40px)/1.1 var(--display); }
+@media (max-width: 760px) { .contact-split { grid-template-columns: minmax(0, 1fr); } }
 .contact .actions { margin-top: 30px; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 20px; padding-bottom: 26px; font-size: 12px; color: var(--ash); }
 
