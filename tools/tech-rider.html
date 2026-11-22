@@ -12,7 +12,6 @@ p, ul { margin: 0; }
 a { color: inherit; }
 header { position: relative; height: 25mm; text-align: center; padding-top: 6mm; }
 h1 { margin: 0; font-size: 19pt; line-height: 1.2; }
-.orientation { margin-top: 1.5mm; font-size: 9pt; }
 .logo { position: absolute; right: 0; top: 0; width: 44mm; height: auto; }
 .plot { display: block; width: 188mm; height: auto; }
 .details { padding: 2mm 5mm 0; }
@@ -23,13 +22,14 @@ table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 
 td { border: .25mm solid #aaa; padding: 1.15mm 2mm; white-space: nowrap; }
 col:nth-child(1), col:nth-child(2) { width: 28%; }
 tr:nth-child(even) td { background: #f3edf9; }
-.contact { margin-top: 3mm; padding-top: 2mm; border-top: .4mm solid #000; font-size: 10.5pt; }
+.contact { margin-top: 3mm; padding-top: 2mm; border-top: .4mm solid #000; font-size: 10.5pt; display: flex; align-items: center; flex-wrap: wrap; }
+.ci { display: inline-flex; align-items: center; gap: 1.4mm; margin-left: 4mm; }
+.ci-icon { width: 4.6mm; height: 4.6mm; flex: none; }
 </style>
 </head>
 <body>
 <header>
   <h1>SLOWTH TECH RIDER</h1>
-  <p class="orientation">Stage left and stage right are from the performers’ perspective.</p>
   <img class="logo" src="slowth-logo-print.png" alt="Slowth">
 </header>
 
@@ -91,7 +91,7 @@ tr:nth-child(even) td { background: #f3edf9; }
   <h2>Band setup</h2>
   <ul>
     <li><b>Sound engineer:</b> Slowth brings its own sound engineer.</li>
-    <li><b>Amps:</b> Slowth always plays through amps and cabs, never impulse responses.</li>
+    <li><b>Amps:</b> Slowth always plays through amps and cabs.</li>
     <li><b>Guitars:</b> Both guitar cabs are miked.</li>
     <li><b>Bass:</b> DI out of the Darkglass, plus two cabs on stage. The bass cabs are not miked.</li>
   </ul>
@@ -116,7 +116,7 @@ tr:nth-child(even) td { background: #f3edf9; }
     <tr><td>4. Rack tom</td><td>8. OH R</td><td>12. Lead vocal (Jacke)</td></tr>
   </table>
 
-  <p class="contact">Any questions, please contact Hector: <a href="mailto:bahamondeh@gmail.com?subject=Slowth%20tech%20rider">bahamondeh@gmail.com</a> or WhatsApp @h.bahamonde</p>
+  <p class="contact">Any questions, please contact Hector: <span class="ci"><svg class="ci-icon" viewBox="0 0 24 24" role="img" aria-label="email" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg><a href="mailto:bahamondeh@gmail.com?subject=Slowth%20tech%20rider">bahamondeh@gmail.com</a></span><span class="ci"><svg class="ci-icon" viewBox="0 0 24 24" role="img" aria-label="whatsapp" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3.4 20.6l1.3-4.4A8.6 8.6 0 1 1 7.9 19.3z"/><path fill="currentColor" stroke="none" d="M9.1 7.6c.3-.3.8-.3 1 .1l.9 1.6c.2.3.1.7-.1 1l-.6.6c.5 1.1 1.4 2 2.5 2.5l.6-.6c.3-.3.7-.3 1-.1l1.6.9c.4.2.4.7.1 1l-.8.8c-.6.6-1.5.7-2.3.4-2.2-.9-3.9-2.6-4.8-4.8-.3-.8-.2-1.7.4-2.3z"/></svg>@h.bahamonde</span></p>
 </div>
 </body>
 </html>
