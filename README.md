@@ -15,10 +15,25 @@ Every push to `main` validates and publishes the `site/` folder. Nothing else is
 | Tech rider | `tools/tech-rider.html`, then rebuild `site/assets/slowth-tech-rider.pdf` |
 | Printable one-sheet | `tools/one-sheet.html`, then rebuild the PDF |
 | Link-preview image | `tools/share-image.html` (1200 x 630) |
+| Logo | see "Logo" below |
 
 The release plan and contact address appear on both the page and the one-sheet: change both.
 The page is written in normal case and displayed in lowercase by CSS. The bio stays in normal
 case so it pastes correctly, and must be identical on the page and the one-sheet.
+
+## Logo
+
+The logo exists in three forms, all made from the band's original logo file (not in this repo):
+
+- `site/assets/slowth-logo.jpg` is the logo on black. `site/style.css` hides the black with a CSS
+  mask, `site/assets/slowth-logo-mask.png` (white, with the logo's transparency). Together they are
+  about a quarter of the size of a transparent PNG.
+- `tools/slowth-logo-print.png` is a transparent PNG for the one-sheet and the tech rider, because
+  Chrome's PDF output ignores CSS masks. It is not published on the site.
+- `site/assets/favicon.png` is the S from the logo.
+
+If the logo changes, remake all of them, rebuild both PDFs and the link-preview image, and update
+the `?v=` values.
 
 ## Gigs
 
