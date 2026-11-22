@@ -9,8 +9,7 @@ site = root / 'site'
 AUDIO = {'.wav', '.mp3', '.flac', '.aif', '.aiff', '.m4a', '.ogg', '.opus', '.wma', '.aac'}
 # Every outside address must be added here on purpose.
 ALLOWED_HOSTS = {
-    'slowthdoom.github.io', 'coochilla.github.io', 'craneiumband.bandcamp.com',
-    'icaptain.bandcamp.com', 'tuonelamagazine.com', 'www.skraeckoedlan.com', 'vimeo.com', 'www.instagram.com',
+    'slowthdoom.github.io', 'www.skraeckoedlan.com', 'vimeo.com', 'www.instagram.com',
 }
 errors = []
 
