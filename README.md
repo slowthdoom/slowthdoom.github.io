@@ -30,7 +30,8 @@ The logo exists in three forms, all made from the band's original logo file (not
   about a quarter of the size of a transparent PNG.
 - `tools/slowth-logo-print.png` is a transparent PNG for the one-sheet and the tech rider, because
   Chrome's PDF output ignores CSS masks. It is not published on the site.
-- `site/assets/favicon.png` is the S from the logo.
+- `site/assets/favicon.png` (64 px, browser tab) and `site/assets/apple-touch-icon.png` (180 px,
+  phone bookmarks) are the sloth badge, a separate image from the band (white margin removed).
 
 If the logo changes, remake all of them, rebuild both PDFs and the link-preview image, and update
 the `?v=` values.
